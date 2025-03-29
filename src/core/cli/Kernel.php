@@ -28,8 +28,6 @@ class Kernel
     {
         $dir = parseDir(__DIR__) . '/../../models';
 
-        var_dump($dir);
-
         $iterator = new DirectoryIterator($dir);
 
         foreach ($iterator as $file) {
@@ -41,7 +39,7 @@ class Kernel
                 $this->manager->schema()->create(
                     "{$model}s",
                     function (Blueprint $table) use ($model) {
-                        echo "\nRunning migrations for " . ucfirst($model) . "...\n";
+                        echo "Running migrations for " . ucfirst($model) . "...\n";
 
                         $modelClass = "App\\Models\\" . ucfirst($model);
 

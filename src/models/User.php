@@ -10,7 +10,7 @@ class User extends Model
     function schema(Blueprint &$table)
     {
         $table->id();
-        $table->string('fullname');
+        $table->string('name');
         $table->string('email');
         $table->string('password');
         $table->timestamps();

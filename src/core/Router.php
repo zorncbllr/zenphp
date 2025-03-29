@@ -50,7 +50,7 @@ class Router implements HttpMethods
 
                     $key = $match[0];
 
-                    $this->request->param->$key = $requestPaths[$i];
+                    $this->request->param->$key = htmlspecialchars($requestPaths[$i]);
 
                     array_push($tempPath, $requestPaths[$i]);
 
