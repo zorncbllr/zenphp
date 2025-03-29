@@ -7,17 +7,11 @@ use App\Core\Request;
 
 class RootController extends Controller
 {
-    function index($msg = '')
+    function index(Request $request)
     {
-        return view('home', [
-            'msg' => $msg
-        ]);
+
+        return view('home');
     }
 
-    function create(Request $request)
-    {
-        return $this->index(
-            msg: $request->text
-        );
-    }
+    function create(Request $request) {}
 }

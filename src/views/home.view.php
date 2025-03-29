@@ -8,7 +8,6 @@
 </head>
 
 <body>
-    <h1><?= $msg ?></h1>
 
     <form action="/" method="post">
         <input type="text" name="text" placeholder="type something...">

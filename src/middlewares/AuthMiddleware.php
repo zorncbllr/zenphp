@@ -5,11 +5,11 @@ namespace App\Middlewares;
 use App\Core\Middleware;
 use App\Core\Request;
 
-class Auth extends Middleware
+class AuthMiddleware extends Middleware
 {
     function callable(Request $request, callable $next)
     {
-        echo 'auth middleware';
+        echo 'Authentication Middleware';
 
         return $next();
     }
