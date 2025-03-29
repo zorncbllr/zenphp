@@ -1,0 +1,23 @@
+{
+  "name": "zorncbllr/zenphp",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\Core\\": "src/core/",
+      "App\\Controllers\\": "src/controllers/",
+      "App\\Middlewares\\": "src/middlewares/"
+    },
+    "files": [
+      "src/core/utils/helpers/helpers.php",
+      "src/core/utils/response.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Manuel",
+      "email": "caballeromanuel203@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
