@@ -29,6 +29,9 @@ class Kernel
             case '-g':
                 $this->generate($argv);
                 break;
+            case 'serve':
+                shell_exec("php -S localhost:3000 -t public -f index.php");
+                break;
         }
     }
 
