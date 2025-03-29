@@ -9,7 +9,7 @@ class AuthMiddleware extends Middleware
 {
     function callable(Request $request, callable $next)
     {
-        echo 'Authentication Middleware';
+        echo 'AuthMiddleware';
 
         return $next();
     }
