@@ -9,6 +9,6 @@ class RootController extends Controller
 {
     function index(Request $request)
     {
-        return view('home');
+        return json(['body' => $request->body]);
     }
 }

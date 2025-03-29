@@ -2,6 +2,8 @@
 
 function view(string $view, array $data = [])
 {
+    header("Content-Type: text/html");
+
     $path = parseDir(__DIR__) . "/../../views/$view.view.php";
 
     if (!file_exists($path)) {
@@ -16,5 +18,13 @@ function view(string $view, array $data = [])
 function redirect(string $route)
 {
     header("Location: $route");
+    exit();
+}
+
+function json(mixed $value)
+{
+    header("Content-Type: application/json");
+
+    echo json_encode($value);
     exit();
 }
