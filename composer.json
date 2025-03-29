@@ -5,7 +5,9 @@
     "psr-4": {
       "App\\Core\\": "src/core/",
       "App\\Controllers\\": "src/controllers/",
-      "App\\Middlewares\\": "src/middlewares/"
+      "App\\Middlewares\\": "src/middlewares/",
+      "App\\Models\\": "src/models/",
+      "App\\Core\\Cli\\": "src/core/cli/"
     },
     "files": [
       "src/core/utils/helpers/helpers.php",

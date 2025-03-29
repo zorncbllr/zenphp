@@ -2,7 +2,9 @@
 
 namespace App\Core;
 
+use DirectoryIterator;
 use Illuminate\Database\Capsule\Manager;
+use Illuminate\Database\Schema\Blueprint;
 
 class Database
 {
@@ -10,6 +12,8 @@ class Database
 
     function __construct()
     {
+        $this->manager = new Manager();
+
         $this->manager->addConnection([
             'driver' => 'mysql',
             'host' => $_ENV['DATABASE_HOST'],
@@ -18,11 +22,15 @@ class Database
             'username' => $_ENV['DATABASE_USER'],
             'password' => $_ENV['DATABASE_PASSWORD'],
             'charset' => 'utf8mb4',
-            'collation' => 'utf8_unicode_ci',
             'prefix' => ''
         ]);
 
         $this->manager->setAsGlobal();
         $this->manager->bootEloquent();
+    }
+
+    function getManager(): Manager
+    {
+        return $this->manager;
     }
 }

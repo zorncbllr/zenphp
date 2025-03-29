@@ -1,0 +1,12 @@
+<?php
+
+use App\Core\Cli\Kernel;
+use Dotenv\Dotenv;
+
+require_once str_replace("\\", "/", __DIR__) . '/vendor/autoload.php';
+
+$dotenv = Dotenv::createImmutable(parseDir(__DIR__));
+$dotenv->load();
+
+$kernel = new Kernel();
+$kernel->boot($argv);
