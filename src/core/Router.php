@@ -38,14 +38,14 @@ class Router implements HttpMethods
 
         preg_match($pattern, $route, $match);
 
-        if (str_contains($route, $match[0])) {
+        if ($match && str_contains($route, $match[0])) {
 
             $tempPath = [];
 
             foreach ($routePaths as $i => $path) {
                 preg_match($pattern, $path, $match);
 
-                if ($match[0]) {
+                if ($match && $match[0]) {
                     preg_match('/\w+/', $match[0], $match);
 
                     $key = $match[0];
