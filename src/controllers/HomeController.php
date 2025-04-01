@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     function index(Request $request)
     {
-        return view('home/home');
+        return view('home');
     }
 }
