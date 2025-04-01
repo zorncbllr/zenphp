@@ -23,6 +23,7 @@
   "minimum-stability": "dev",
   "require": {
     "vlucas/phpdotenv": "^5.6@dev",
-    "illuminate/database": "^13.0@dev"
+    "illuminate/database": "^13.0@dev",
+    "eftec/bladeone": "dev-master"
   }
 }

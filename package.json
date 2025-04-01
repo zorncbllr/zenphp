@@ -1,10 +1,9 @@
 {
-  "name": "afmax-ordering-system",
+  "name": "zenphp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i public/css/app.css -o public/css/tailwind.css --watch",
-    "dev": "concurrently \"php zenx serve\" \"npx @tailwindcss/cli -i public/css/app.css -o public/css/tailwind.css --watch\""
+    "dev": "npx @tailwindcss/cli -i public/css/app.css -o public/dist/tailwind.css --watch"
   },
   "repository": {
     "type": "git",
@@ -21,8 +20,5 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.0.17",
     "tailwindcss": "^4.0.17"
-  },
-  "devDependencies": {
-    "concurrently": "^9.1.2"
   }
 }

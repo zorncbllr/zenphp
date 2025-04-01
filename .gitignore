@@ -1,4 +1,11 @@
 /vendor/
 /node_modules/
 
+<<<<<<< HEAD
+=======
+public/dist/
+
+src/cache/
+
+>>>>>>> 120d1ff (added bladeone for templating)
 .env
